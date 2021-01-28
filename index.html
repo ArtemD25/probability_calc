@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probability</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="visually-hidden">This calculator allows you to know your chances of getting two sixes after rolling two
+    dices</h1>
+  <section class="explanation">
+    <p class="explanation_1">
+      Imagine you will win <strong>1 000 000 USD</strong> if you get two sixes after rolling two dices. What are your
+      chances to become
+      a millionaire? Type the number of tries in the input below and you'll see your probability of winning.
+    </p>
+    <p class="explanation_2">
+      In order to navigate you can either press buttons or hit Enter key on your keyboard.
+    </p>
+  </section>
+
+  <section class="container">
+    <div class="wrap">
+      <div class="card_1">
+        <input class="input" type="number" placeholder="Type number of tries, eg. 10">
+        <button class="btn" aria-label="CLick in order to get your number calculated" type="button">Go!</button>
+        <p class="error-text">Enter digit '1' or smth greater</p>
+      </div>
+      <div class="card_2">
+        <button class="back" aria-label="CLick if you wanna take step back and type another number of tries">Go back
+          and
+          try again</button>
+        <p class="output-text"></p>
+        <p class="output-num"></p>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>

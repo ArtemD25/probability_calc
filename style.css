@@ -1,0 +1,281 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.explanation {
+  max-width: 450px;
+  margin-bottom: 25px;
+
+  text-align: justify;
+}
+
+.explanation_1,
+.explanation_2 {
+  margin: 0;
+  position: relative;
+}
+
+.explanation_1 {
+  margin-bottom: 15px;
+}
+
+.explanation_1::before,
+.explanation_2::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -40px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.explanation_1::before {
+  background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/facebook/230/money-mouth-face_1f911.png");
+}
+.explanation_2::before {
+  background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/144/facebook/230/keyboard_2328.png");
+  top: -6px;
+}
+
+@media (max-width: 680px) {
+  .explanation {
+    margin-top: 40px;
+  }
+
+  .explanation_1::before,
+  .explanation_2::before {
+    left: 0px;
+    top: -20px;
+
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .explanation_1 {
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 560px) {
+  .explanation {
+    max-width: 300px;
+  }
+}
+
+strong {
+  color: salmon;
+}
+
+.container {
+  width: 210px;
+  min-height: 240px;
+  border: 10px solid rgba(0,0,0,0.05);
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: start;
+
+  border-radius: 20px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: start;
+
+  overflow: hidden;
+}
+
+.card_1,
+.card_2 {
+  width: 210px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_1 {
+  margin-left: 0px;
+  transition: margin-left 400ms ease-in-out;
+}
+
+.input {
+  height: 40px;
+  width: 200px;
+  border: 3px solid #c7c7c7;
+  outline: none;
+
+  border-radius: 20px;
+  text-align: center;
+}
+
+.input:focus {
+  border: 3px solid salmon;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+
+.btn {
+  height: 40px;
+  width: 206px;
+  border: none;
+  margin-top: 10px;
+  outline: none;
+
+  background: rgb(117,110,227);
+  background: -moz-linear-gradient(90deg, rgba(117,110,227,1) 0%, rgba(0,212,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(117,110,227,1) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(117,110,227,1) 0%, rgba(0,212,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#756ee3",endColorstr="#00d4ff",GradientType=1);
+
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: all 300ms ease-out;
+}
+
+.btn:active,
+.btn:hover {
+  background: rgb(132, 125, 233);
+  background: -moz-linear-gradient(90deg, rgb(132, 125, 233) 0%, rgb(46, 220, 255) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(132, 125, 233,1) 0%, rgba(46, 220, 255,1) 100%);
+  background: linear-gradient(90deg, rgba(132, 125, 233) 0%, rgba(46, 220, 255,1) 100%);
+}
+
+.btn:active {
+  transform: scale(0.9);
+  transition: all 300ms ease-out;
+}
+
+.back {
+  position: absolute;
+  left: 0;
+  top: 10px;
+
+  border: 0;
+  padding-left: 6px;
+  outline: none;
+
+  background: transparent;
+  
+  font-size: 11px;
+  text-decoration: underline;
+  color: rgb(12, 12, 248);
+
+  cursor: pointer;
+}
+
+.back:hover,
+.back:active {
+  color: salmon;
+}
+
+.back::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+  margin-right: 2px;
+  border-left: 1px solid rgb(12, 12, 248);
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid  rgb(12, 12, 248);
+
+  transform: rotate(45deg);
+  position: relative;
+  top: 1px;
+}
+
+.back:hover::before,
+.back:active::before {
+  border-left: 1px solid salmon;
+  border-bottom: 1px solid salmon;
+}
+
+.output-text {
+  min-height: 45px;
+  width: 206px;
+  margin: 0;
+  margin-top: 16px;
+
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+}
+
+.error-text {
+  width: 206px;
+  margin: 0;
+  margin-top: 10px;
+
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+
+  color: red;
+  font-size: 16px;
+  text-align: center;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.output-num {
+  min-height: 30px;
+  width: 206px;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+}
+
+.marginLeft {
+  margin-left: -210px;
+  transition: margin-left 400ms ease-in-out;
+}
+
